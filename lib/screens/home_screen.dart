@@ -42,11 +42,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: SingleChildScrollView(
                         child: Padding(
                           padding: EdgeInsets.only(bottom: 25),
-                          child: SideBar(
-                              logoSize: deviceWidth / 4,
-                              spaceBW: 15,
-                              scrollController: _scrollController,
-                              listHeight: deviceheight / 3),
+                          child: SizedBox(
+                            height: deviceheight,
+                            width: deviceWidth * 0.7,
+                            child: SideBar(
+                                logoSize: deviceWidth / 4,
+                                spaceBW: 15,
+                                scrollController: _scrollController,
+                                listHeight: deviceheight / 3),
+                          ),
                         ),
                       ),
                     ),
